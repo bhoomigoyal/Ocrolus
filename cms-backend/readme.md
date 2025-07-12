@@ -10,7 +10,7 @@ A modern Content Management System backend built with FastAPI and PostgreSQL, pr
 - **Interactive Documentation**: Auto-generated API documentation with Swagger UI
 - **Local Development**: Support for both local and containerized development
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before running the application, ensure you have the following installed:
 
@@ -23,7 +23,7 @@ Before running the application, ensure you have the following installed:
 - Docker
 - Docker Compose
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### Option 1: Local Development
 
@@ -103,7 +103,7 @@ Once the application is running, you can access the interactive API documentatio
 - **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
-## 🧪 Testing
+##  Testing
 
 For detailed testing instructions and screenshots, refer to our testing documentation:
 
