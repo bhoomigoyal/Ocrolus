@@ -61,7 +61,7 @@ uvicorn app.main:app --reload
 
 #### 1. Build and Run with Docker Compose
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ##  Switching Between Local and Docker
@@ -69,7 +69,7 @@ docker-compose up --build
 ### From Docker to Local Development
 ```bash
 # Stop Docker containers
-docker-compose down
+docker compose down
 
 # Start PostgreSQL service
 sudo service postgresql start
@@ -101,8 +101,7 @@ docker-compose up --build
 Once the application is running, you can access the interactive API documentation:
 
 - **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
-- **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
-
+- 
 ##  Testing
 
 For detailed testing instructions and screenshots, refer to our testing documentation:
