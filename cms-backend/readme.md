@@ -113,14 +113,45 @@ For detailed testing instructions and screenshots, refer to our testing document
 
 ```
 cms-backend/
+├── alembic/                       # Alembic migration scripts
+│   ├── env.py
+│   ├── versions/
+│   │   ├── 91b4204982bb_initial_migration.py
+│   │   └── ed094139a9b9_add_bio_column_to_user.py
+│   └── ... (other Alembic files)
 ├── app/
-│   ├── main.py          # FastAPI application entry point
-│   ├── models/          # Database models
-│   ├── routes/          # API route definitions
-│   ├── schemas/         # Pydantic schemas
-│   └── database/        # Database configuration
-├── requirements.txt     # Python dependencies
-├── docker-compose.yml   # Docker configuration
-├── Dockerfile          # Docker image definition
-└── README.md           # This file
+│   ├── __init__.py
+│   ├── main.py                    # FastAPI application entry point
+│   ├── config.py                  # App settings/configuration
+│   ├── database.py                # Database configuration
+│   ├── models/                    # Database models
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   └── article.py
+│   ├── schemas/                   # Pydantic schemas
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   └── article.py
+│   ├── crud/                      # CRUD operations
+│   │   ├── __init__.py
+│   │   └── article.py
+│   ├── core/                      # Core logic (auth, recently viewed, etc.)
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   └── recently_viewed.py
+│   ├── api/                       # (Optional) API route definitions
+│   │   ├── __init__.py
+│   │   └── articles.py
+│   └── ... (other app files)
+├── tests/                         # Unit and integration tests
+│   ├── conftest.py
+│   ├── test_article_crud.py
+│   ├── test_articles.py
+│   └── test_auth.py
+├── requirements.txt               # Python dependencies
+├── docker-compose.yml             # Docker Compose configuration
+├── Dockerfile                     # Docker image definition
+├── alembic.ini                    # Alembic configuration
+├── .env                           # Environment variables
+└── README.md                      # Project documentation
 ```
