@@ -13,4 +13,6 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
+    bio = Column(String, default="")
+
     articles = relationship("Article", back_populates="author")

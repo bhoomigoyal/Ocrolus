@@ -9,9 +9,10 @@ from ..database import SessionLocal
 from ..config import settings
 from ..models.user import User
 
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")  # <- this line is key!
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")  # <- fixed: added leading slash
 
 def get_db():
     db = SessionLocal()
